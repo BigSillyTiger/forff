@@ -66,6 +66,25 @@ th {
     margin: 45px auto 0;
 }
 
+.order_list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.borderrr {
+    border: 1px solid red;
+}
+
+.order_list .name {
+    width: 70%;
+}
+.order_list .qty {
+    width: 15%;
+}
+.order_list .price {
+    width: 15%;
+}
+
 #user-name {
     background-color: #fafafa;
     color: #000000;
