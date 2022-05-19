@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+
+header {
+    background-color: transparent;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    background-color: transparent;
+}
+
+.button {
+    background-color: #f6c12c;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 30%;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    left: 350px;
+    top: 300px;
+}
+
+.button1 {
+    background-color: #f6c12c;
+    color: black;
+    border: none;
+}
+
+.button1:hover {
+    background-color: #070a9e;
+    color: black;
+}
+
+div.relative {
+    width: 1000px;
+    height: 100px;
+    margin: 400px auto;
+    line-height: 100px;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    padding: 0 !important;
+    background-size: 2000px 650px;
+    background-image: url("./assets/pasta_11-scaled-1.jpg");
+    background-repeat: no-repeat;
+}
+
+.logo {
+    padding-top: 100px;
+    width: 520px;
+    height: 115px;
+    margin: 0 auto;
+}

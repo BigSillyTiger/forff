@@ -1,0 +1,55 @@
+.main_content {
+    width: 100%;
+    height: 30vh;
+    background-color: lightgoldenrodyellow;
+}
+
+.slogan {
+    width: 1000px;
+    height: 100px;
+    margin-top: 85px;
+    line-height: 100px;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    padding: 0 !important;
+    background-size: 2000px 650px;
+    background-image: url("./assets/pasta_01.jpg");
+    background-repeat: no-repeat;
+}
+
+.logo {
+    padding-top: 100px;
+    width: 520px;
+    height: 115px;
+    margin: 0 auto;
+}
+
+.menu td {
+    font-family: Arial;
+    text-align: center;
+}
+
+.menu h {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu2 table {
+    border: none;
+    border-collapse: hidden;
+}
+
+.menu2 tr {
+    border-bottom: none;
+}
+
+.menu2 td {
+    width: 500px;
+}
