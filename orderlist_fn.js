@@ -11,18 +11,12 @@ const createOrderHero = () => {
         </div>`;
 };
 
-const createLoading = () => {
+const createEmptyOrder = () => {
     return `
-        <div class="preloader-wrapper big active divCenter">
-            <div class="spinner-layer spinner-blue-only">
-            <div class="circle-clipper left">
-                <div class="circle"></div>
-            </div><div class="gap-patch">
-                <div class="circle"></div>
-            </div><div class="circle-clipper right">
-                <div class="circle"></div>
-            </div>
-            </div>
+        <div class="order_list"> 
+            <h3>
+                There's no orders yet.
+            </h3>
         </div>
     `;
 };
@@ -43,7 +37,7 @@ const createOrderCards = (content) => {
     return content.map((item) => {
         const orderList = JSON.parse(item.order);
         const JsonContent = createlist(orderList).join("");
-        console.log("-=-=-=: ", JsonContent);
+        console.log("-=-=-=: ", orderList);
         return `
         <div class="row" key="${item.createdAt}">
             <div class="card horizontal">

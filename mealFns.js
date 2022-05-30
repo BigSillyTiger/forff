@@ -102,16 +102,39 @@ const createCheckOutModal = () => {
     const addr = "1st Day Rd, Group work, Web Application";
 
     $("#order_btn").click(() => {
-        const order = JSON.stringify(checkoutList);
+        const order = JSON.stringify(checkRepeat(checkoutList));
+        /* const instance = M.Modal.getInstance(
+            document.querySelector("#waiting")
+        );
+        instance.open(); */
+        toastTips(true);
         ffReq
             .makeOrder(name, tel, addr, order)
             .done((result) => {
                 console.log("-> place order success.");
+                //instance.close();
+                toastTips(false);
+                window.location.href = "./payment/index.html";
             })
             .error((err) => {
                 console.log("-> place order error: ", err);
             });
     });
+};
+
+const toastTips = (flag) => {
+    if (flag) {
+        M.toast({
+            html: "Placing order...\n do not leave this page please.",
+            classes: "rounded",
+        });
+    } else {
+        M.Toast.dismissAll();
+        M.toast({
+            html: "Order Placed~",
+            classes: "rounded",
+        });
+    }
 };
 
 const createCheckoutlist = (data) => {
@@ -139,8 +162,6 @@ const createCheckoutlist = (data) => {
         item.qty = 0;
         item.total = item.price.toString();
     });
-
-    console.log("------> check out: ", checkoutList);
 
     return checkRepeat(checkoutList);
 };

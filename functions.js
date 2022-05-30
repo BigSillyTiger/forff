@@ -191,6 +191,22 @@ const planPreset = {
     ],
 };
 
+const createLoading = () => {
+    return `
+        <div class="preloader-wrapper big active divCenter">
+            <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+    `;
+};
+
 const createNavBar = () => {
     return `
         <nav>
@@ -264,7 +280,7 @@ const add = (n1, n2) => {
 
 const multi = (n1, q) => {
     let a1 = Number(n1.split(".")[0]);
-    let a2 = Number(n1.split(".")[1]);
+    let a2 = Number(n1.split(".")[1] ? n1.split(".")[1] : "0");
     let t1 = a1 * q + parseInt((a2 * q) / 100);
     let t2 = (a2 * q) % 100;
     return `${t1}.${t2}`;

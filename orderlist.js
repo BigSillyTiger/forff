@@ -7,7 +7,9 @@ function loadEntries() {
     ffReq
         .get()
         .done(function (result) {
-            if (!result.entries) {
+            if (!result.entries || !result.entries.length) {
+                $("#orders_container").empty();
+                $("#orders_container").append(createEmptyOrder());
                 return;
             }
 

@@ -91,6 +91,11 @@ th {
     padding: 15px;
 }
 
+.divCenter {
+    left: 50%;
+    top: 50%;
+}
+
 .footerStyle {
     padding-top: 15vh;
 }
